@@ -1,0 +1,38 @@
+---
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from "@/components/starwind/tabs";
+
+import HomeTabTropical from "./HomeTabTropical.astro";
+import HomeTabOriental from "./HomeTabOriental.astro";
+import HomeTabRoots from "./HomeTabRoots.astro";
+---
+
+<section class="h-auto flex flex-col items-center py-12">
+  <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
+    Our Products
+  </h1>
+  <div
+    class="w-auto mx-auto px-8 sm:px-0 flex items-center justify-center text-center pt-2"
+  >
+    <Tabs defaultValue="tropical" class="max-w-auto">
+      <TabsList class="bg-white/0 text-acent">
+        <TabsTrigger value="oriental">ORIENTAL</TabsTrigger>
+        <TabsTrigger value="tropical">TROPICAL</TabsTrigger>
+        <TabsTrigger value="roots">ROOTS</TabsTrigger>
+      </TabsList>
+      <TabsContent value="oriental">
+        <HomeTabOriental />
+      </TabsContent>
+      <TabsContent value="tropical">
+        <HomeTabTropical />
+      </TabsContent>
+      <TabsContent value="roots">
+        <HomeTabRoots />
+      </TabsContent>
+    </Tabs>
+  </div>
+</section>

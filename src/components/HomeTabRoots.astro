@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+const products = await getCollection("products");
+import * as productPumpkin from "../content/products/pumpkin.md";
+import * as productSweetPotatoe from "../content/products/sweetPotatoe.md";
+import * as productGarlic from "../content/products/garlic.md";
+---
+
+<div class="px-4 mx-auto w-full h-auto max-w-xl pt-20">
+  <div
+    class="h-auto w-full text-center items-center grid grid-cols-2 grid-rows-2 border-2 border-gray-100 rounded"
+  >
+    <a
+      href={`/product/${productPumpkin.frontmatter.slug}`}
+      class="xl:mb-0 border-r-2 border-gray-100"
+    >
+      <article class="flex flex-col w-full relative">
+        <img
+          src={`/${productPumpkin.frontmatter.img}`}
+          alt={productPumpkin.frontmatter.title}
+          class="w-full block h-full"
+        />
+
+        <div
+          class="w-full h-full top-0 left-0 flex flex-col justify-end items-center pt-4 pb-1 absolute"
+        >
+          <h2
+            class="text-md md:text-2xl font-bold leading-tight text-yellow-800 bg-yellow-100/80 rounded-2xl px-2 py-1 mb-2"
+          >
+            {productPumpkin.frontmatter.title}
+          </h2>
+        </div>
+      </article>
+    </a>
+
+    <a
+      href={`/product/${productSweetPotatoe.frontmatter.slug}`}
+      class="xl:mb-0 border-b-2 border-gray-100"
+    >
+      <article class="flex flex-col w-full relative">
+        <img
+          src={`/${productSweetPotatoe.frontmatter.img}`}
+          alt={productSweetPotatoe.frontmatter.title}
+          class="w-full h-full block"
+        />
+
+        <div
+          class="w-full h-full top-0 left-0 flex flex-col justify-end items-center pt-4 pb-1 absolute"
+        >
+          <h2
+            class="text-md md:text-2xl font-bold leading-tight text-yellow-800 bg-yellow-100/80 rounded-2xl px-2 py-1 mb-2"
+          >
+            {productSweetPotatoe.frontmatter.title}
+          </h2>
+        </div>
+      </article>
+    </a>
+
+    <a
+      href={`/product/${productGarlic.frontmatter.slug}`}
+      class="xl:mb-0 border-t-2 border-gray-100"
+    >
+      <article class="flex flex-col w-full relative">
+        <img
+          src={`/${productGarlic.frontmatter.img}`}
+          alt={productGarlic.frontmatter.title}
+          class="w-full h-full block"
+        />
+
+        <div
+          class="w-full h-full top-0 left-0 flex flex-col justify-end items-center pt-4 pb-1 absolute"
+        >
+          <h2
+            class="text-md md:text-2xl font-bold leading-tight text-yellow-800 bg-yellow-100/80 rounded-2xl px-2 py-1 mb-2"
+          >
+            {productGarlic.frontmatter.title}
+          </h2>
+        </div>
+      </article>
+    </a>
+
+    <div
+      class="w-full h-full flex flex-col justify-center items-center text-white border-l-2 border-gray-100 bg-yellow-800"
+    >
+      <p class="pb-3 px-2">Freshness and Flavor from the Earth</p>
+      <a
+        href="/products"
+        class="px-2 py-1 font-bold rounded-2xl text-yellow-800 bg-yellow-100"
+        >See more ></a
+      >
+    </div>
+  </div>
+</div>

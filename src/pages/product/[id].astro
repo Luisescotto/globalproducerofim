@@ -1,0 +1,188 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+
+  return products.map((product: { data: any }) => ({
+    params: { id: product.slug },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { data, slug } = product;
+const { title, description, img, category, packageType, pounds } = data;
+---
+
+<style>
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+  }
+</style>
+
+<Layout title={title}>
+  <div
+    class="flex w-full h-screen max-h-96 overflow-hidden text-left z-0 relative min-h-96 justify-items-start items-end"
+  >
+    <div class="z-30 relative pb-6 px-10 text-white">
+      <div class="flex flex-col text-white">
+        <ul class="text-[min(6vw,40px)] font-bold">
+          <li class="flex">
+            <span>Premium Quality</span>
+          </li>
+          <li class="flex">
+            <span>Authentic Products</span>
+          </li>
+          <li class="flex">
+            <span>Professional Excellence</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="absolute top-0 bottom-0 w-full h-full z-10">
+      <img
+        class="object-center h-full w-full object-cover"
+        src="/heroBgProducts.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="w-full bg-secondary">
+    <a
+      class="text-white font-bold flex items-center px-12 pt-12"
+      href="/products"
+      ><Icon name="arrow-left" size={50} class="text-white" />All Products
+    </a>
+  </div>
+
+  <div class="flex flex-col justify-center items-center py-10 bg-secondary">
+    <div
+      class="flex flex-col-reverse sm:flex-row sm:items-center gap-12 justify-center items-start"
+    >
+      <aside class="flex items-center gap 4">
+        <img
+          class="rounded w-72 h-auto pointer-events-none shadow-xl"
+          src={`/${img}`}
+          alt={title}
+        />
+      </aside>
+      <main
+        class="max-w-3xl text-white flex flex-col justify-center items-start"
+      >
+        {
+          category == "Tropical" ? (
+            <span class="rounded-2xl px-2 text-[14px] font-medium text-secondary bg-green-100">
+              {category}
+            </span>
+          ) : category == "Oriental" ? (
+            <span class="rounded-2xl px-2 text-[14px] font-medium text-orange-900 bg-orange-100">
+              {category}
+            </span>
+          ) : (
+            <span class="rounded-2xl px-2 text-[14px] font-medium text-yellow-800 bg-yellow-100">
+              {category}
+            </span>
+          )
+        }
+        <h1 class="text-4xl font-bold mb-4">
+          {title}
+        </h1>
+        <p class="py-2">Availability: Year-Round</p>
+        <p class="py-2">Pack: {packageType}</p>
+        <p class="py-2">{pounds ? `Weight: ${pounds}` : ""}</p>
+      </main>
+    </div>
+  </div>
+  <footer
+    class="w-full h-auto flex justify-center items-center bg-secondary pb-4"
+  >
+    <div class="border-2 border-acent pt-4 rounded-xl mx-4">
+      <p
+        class="prose prose-invert text-white pb-4 px-8 font-bold text-xl text-center sm:text-start"
+      >
+        {description}
+      </p>
+    </div>
+  </footer>
+  <div class="w-full flex justify-center items-center text-center">
+    <h1 class="text-white font-bold text-2xl py-8 bg-secondary w-full">
+      Why Partner with us?
+    </h1>
+  </div>
+
+  <div
+    class="cards-grid h-auto w-full text-center items-center bg-secondary pb-12 gap-4 px-12"
+  >
+    <article
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-between items-center p-8 rounded shadow-md"
+    >
+      <Icon
+        name="leaf"
+        size={50}
+        class="text-secondary bg-green-100 rounded-full p-2"
+      />
+
+      <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
+        10+ Years of Expertise
+      </h2>
+      <p class="text-md text-title">
+        Decade-long experience in handling, packaging, and exporting tropical
+        and oriental produce.
+      </p>
+    </article>
+    <article
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-between items-center p-8 rounded shadow-md"
+    >
+      <Icon
+        name="medal"
+        size={50}
+        class="text-secondary bg-green-100 rounded-full p-2"
+      />
+      <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
+        Premium Quality
+      </h2>
+      <p class="text-md text-title">
+        Handpicked fruits and vegetables meeting international standards for
+        taste and safety.
+      </p>
+    </article>
+    <article
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-between items-center p-8 rounded shadow-md"
+    >
+      <Icon
+        name="truck"
+        size={50}
+        class="text-secondary bg-green-100 rounded-full p-2"
+      />
+      <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
+        Efficient Logistics
+      </h2>
+      <p class="text-md text-title">
+        Seamless shipping to the Americas, Europe, Asia, and the Caribbean.
+      </p>
+    </article>
+    <article
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-between items-center p-8 rounded shadow-md"
+    >
+      <Icon
+        name="hands"
+        size={50}
+        class="text-secondary bg-green-100 rounded-full p-2"
+      />
+      <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
+        Ethical Sourcing
+      </h2>
+      <p class="text-md text-title">
+        Sustainable practices and fair partnerships with local Dominican
+        farmers.
+      </p>
+    </article>
+  </div>
+</Layout>

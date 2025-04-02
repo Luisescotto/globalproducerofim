@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section
+  class="flex w-full h-screen overflow-hidden text-left z-0 relative min-h-96 justify-items-start items-center md:items-end"
+>
+  <div class="z-30 relative pb-6 px-10 text-white">
+    <header class="flex flex-col flex-nowrap mb-4">
+      <h1
+        class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl lg:pr-20 font-bold font-inter"
+      >
+        TRANDING GLOBAL PRODUCE ROFIM
+      </h1>
+      <h2 class="text-xl md:text-2xl font-semibold -mt-2 font-inter">
+        Tropical Produce, Global Reach
+      </h2>
+    </header>
+
+    <div class="flex flex-col text-white">
+      <ul
+        class="text-xl sm:2xl md:4xl lg:text-4xl font-light justify-center items-start flex flex-col gap-5"
+      >
+        <li class="flex">
+          <Icon
+            class="text-2xl sm:text-3xl lg:text-5xl"
+            name="check-bold"
+          /><span>Premium Quality</span>
+        </li>
+        <li class="flex">
+          <Icon
+            class="text-2xl sm:text-3xl lg:text-5xl"
+            name="check-bold"
+          /><span>Streamlined Logistics</span>
+        </li>
+        <li class="flex">
+          <Icon
+            class="text-2xl sm:text-3xl lg:text-5xl"
+            name="check-bold"
+          /><span>Genuine Dominican Goods</span>
+        </li>
+        <li class="flex">
+          <Icon
+            class="text-2xl sm:text-3xl lg:text-5xl"
+            name="plus-outline"
+          /><span>10 Years of Sector Expertise</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="absolute top-0 bottom-0 w-full h-full z-10">
+    <img
+      class="object-center h-full w-full object-cover"
+      src="/heroBg.jpg"
+      alt=""
+    />
+  </div>
+</section>

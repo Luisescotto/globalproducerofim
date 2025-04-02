@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="bg-black/70 backdrop-blur-xs w-screen h-full z-50 fixed top-0 right-0 hidden cursor-pointer"
+  id="side_menu_bg"
+>
+</div>
+<aside
+  class="bg-secondary text-white p-6 fixed top-0 -right-[500px] h-screen w-[270px] z-60 border-l-2 border-white transition-all"
+  id="side_menu"
+>
+  <nav class="flex flex-col gap-4 pl-4">
+    <button
+      class="p-2 rounded-md hover:bg-primary self-end"
+      id="side_menu_close"
+    >
+      <Icon name="close" size={32} />
+    </button>
+    <ul class="flex flex-col gap-4">
+      <li>
+        <a
+          class="text-2xl text-white hover:bg-primary hover:underline px-2 py-2 rounded"
+          href="/">Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-2xl text-white hover:bg-primary hover:underline px-2 py-2 rounded"
+          href="/about">About us</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-2xl text-white hover:bg-primary hover:underline px-2 py-2 rounded"
+          href="/products">Products</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-2xl text-white hover:bg-primary hover:underline px-2 py-2 rounded"
+          href="/contact">Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<script>
+  import { isSideMenuOpen } from "@/store";
+  const sideMenu = document.getElementById("side_menu");
+  const side_menu_bg = document.getElementById("side_menu_bg");
+  const sideMenuClose = document.getElementById("side_menu_close");
+
+  isSideMenuOpen.subscribe((open) => {
+    if (open) {
+      sideMenu?.classList.remove("-right-[500px]");
+      sideMenu?.classList.add("right-0");
+      side_menu_bg?.classList.remove("hidden");
+    }
+    if (!open) {
+      sideMenu?.classList.add("-right-[500px]");
+      sideMenu?.classList.remove("right-0");
+      side_menu_bg?.classList.add("hidden");
+    }
+  });
+
+  function closeSideMenu() {
+    isSideMenuOpen.set(false);
+  }
+
+  sideMenuClose?.addEventListener("click", closeSideMenu);
+  side_menu_bg?.addEventListener("click", closeSideMenu);
+</script>
