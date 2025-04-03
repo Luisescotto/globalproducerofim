@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 const products = await getCollection("products");
+export const prerender = true;
 ---
 
 <style>

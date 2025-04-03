@@ -6,6 +6,7 @@ import HomeTabs from "../components/HomeTabs.astro";
 import { getCollection } from "astro:content";
 const brands = await getCollection("brands");
 const flags = await getCollection("flags");
+export const prerender = true;
 ---
 
 <Layout title="Tranding Global Produce Rofim">

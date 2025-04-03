@@ -18,22 +18,6 @@
 		{
 			"src": "^/_image/?$",
 			"dest": "_render"
-		},
-		{
-			"src": "^/about/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/contact/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/products/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/$",
-			"dest": "_render"
 		}
 	]
 }
