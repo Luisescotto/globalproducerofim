@@ -1,0 +1,79 @@
+---
+import HeroSearch from "../../components/HeroSearch.astro";
+import HomeTabs from "../../components/HomeTabs.astro";
+import { getCollection } from "astro:content";
+
+import { getI18N } from "@/i18n";
+
+const brands = await getCollection("brands");
+const flags = await getCollection("flags");
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+export const prerender = true;
+---
+
+<HeroSearch />
+<HomeTabs />
+
+<section class="w-full h-full bg-amber-700">
+  <div>
+    <img class="w-full h-full pointer-events-none" src="/bannerbg.jpg" alt="" />
+  </div>
+</section>
+
+<section class="flex flex-col mt-6 w-full h-full">
+  <div class="flex justify-center items-center text-center">
+    <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
+      {i18n.HOME.BRANDS_TITLE}
+    </h1>
+  </div>
+  <div class="flex overflow-hidden">
+    <ul class="flex animate-loop-scroll py-10 gap-10">
+      {
+        [...brands, ...brands].map((brand: { data: any }) => {
+          const { data } = brand;
+          const { brandImg, brandAlt } = data;
+          return (
+            <li class="flex gap-2">
+              <img
+                loading="lazy"
+                src={brandImg}
+                alt={brandAlt}
+                class="max-w-none w-25 h-18 md:w-35 md:h-25"
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="flex flex-col mt-6 w-full h-full">
+  <div class="flex justify-center items-center text-center">
+    <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
+      {i18n.HOME.EXPORT_TITLE}
+    </h1>
+  </div>
+  <div class="flex overflow-hidden">
+    <ul class="flex animate-loop-inverse py-10 gap-10">
+      {
+        [...flags, ...flags].map((flag: { data: any }) => {
+          const { data } = flag;
+          const { flagImg, flagAlt } = data;
+          return (
+            <li class="flex gap-2">
+              <img
+                loading="lazy"
+                src={flagImg}
+                alt={flagAlt}
+                class="max-w-none w-20 md:w-35 h-auto"
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

@@ -1,7 +1,12 @@
 ---
+import { getI18N } from "@/i18n";
+
 import * as productChili from "../content/products/thaiChilli.md";
 import * as productTindora from "../content/products/tindora.md";
 import * as productJack from "../content/products/jackfruit.md";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="px-4 mx-auto w-full h-auto max-w-xl pt-20">
@@ -81,12 +86,12 @@ import * as productJack from "../content/products/jackfruit.md";
       class="w-full h-full flex flex-col justify-center items-center text-white border-l-2 border-gray-100 bg-orange-900"
     >
       <p class="pb-3 px-2 text-xs md:text-xl">
-        Exotic Vegetables: Asian Flavors, Premium Quality
+        {i18n.TABS.TAB_ORIENTAL.TAB_P}
       </p>
       <a
         href="/products"
         class="px-2 py-1 font-bold rounded-2xl text-orange-900 bg-orange-100"
-        >See more ></a
+        >{i18n.TABS.TAB_ORIENTAL.TAB_LINK}</a
       >
     </div>
   </div>

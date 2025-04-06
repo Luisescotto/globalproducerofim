@@ -1,0 +1,149 @@
+{
+    "HOME": {
+        "BRANDS_TITLE": "Marcas que confían en nosotros",
+        "EXPORT_TITLE": "Destinos de Exportación"   
+    },
+    "HERO_HOME": {
+        "HERO_TITLE": "TRANDING GLOBAL PRODUCE ROFIM",
+        "HERO_TAGLINE": "Frescura Dominicana, Lista para Exportar",
+        "P1": "Calidad Superior",
+        "P2": "Logística Optimizada",
+        "P3": "Productos Dominicanos Auténticos",
+        "P4": "10 Años de Experiencia en el Sector"
+    },
+    "TABS": {
+        "SECTION_TITLE": "Nuestros Productos",
+        "TAB1_NAME":"ORIENTAL",
+        "TAB2_NAME":"TROPICAL",
+        "TAB3_NAME": "HORTALIZAS",
+        "TAB_ORIENTAL": {
+            "TAB_P": "Vegetales Exóticos: Sabores Asiáticos, Calidad Premium",
+        "TAB_LINK": "Ver más >"
+        },
+        "TAB_TROPICAL": {
+            "TAB_P": "Frescura Caribeña, Calidad Global",
+        "TAB_LINK": "Ver más >"
+        },
+        "TAB_ROOTS": {
+            "TAB_P": "Frescura y Sabor Directo de la Tierra",
+        "TAB_LINK": "Ver más >"
+        }
+    },
+   "ABOUT": {
+        "BANNER_SPAN": "Establecida en 2024",
+        "BANNER_TITLE": "Acerca de Tranding Global Produce Rofim",
+        "BANNER_P": "Conectando la frescura dominicana con mercados globales, con sostenibilidad y excelencia.",
+        "MAIN":{
+        "MAIN_SPAN" : "Fundada el 2 de febrero de 2024",
+        "MAIN_TITLE": "¿Por Qué Elegirnos?",
+        "MAIN_P1": "Con más de una década de experiencia en la gestión, procesamiento y logística de Exportación de frutas y vegetales, operamos desde República Dominicana hacia mercados clave como EE.UU., Europa y el Caribe.",
+        "MAIN_P2": "Innovamos sin pausa en nuestras instalaciones, respaldados por talento especializado, agricultores eficientes y socios estratégicos, para que recibas productos dominicanos de primera calidad.",
+        "FOOTER":{
+            "FOOTER_CARD1":{
+                "CARD_P1": "10+",
+                "CARD_P2": "Años de Experiencia"
+            },
+            "FOOTER_CARD2":{
+                "CARD_P1": "20+",
+                "CARD_P2": "variedades de Productos"
+            }
+        }
+        },
+        "SECTION_PRINCIPLES": {
+            "SECTION_TITLE": "Nuestro Camino y Propósito",
+            "SECTION_TAGLINE": "Con valores arraigados y una visión clara, cultivamos la excelencia en cada proceso, desde el campo hasta su destino",
+
+            "MISSION":{
+                "TITLE":"Misión",
+                "TAGLINE":"Calidad Sin Fronteras",
+                "P1": "Abastecer mercados internacionales con frutas y vegetales frescos y de alta calidad, cultivados bajo prácticas sostenibles. Garantizamos seguridad alimentaria y el fortalecimiento de productores locales.",  
+                "P2": "Nos comprometemos con la excelencia en cada etapa de la cadena: desde la siembra hasta la exportación, para satisfacer demandas globales e impulsar el crecimiento del sector agropecuario dominicano.",  
+                "CARD_1": "Sostenible",
+                "CARD_2": "Alcance Global",
+                "CARD_3": "Calidad Asegurada"
+            },
+            "VISION":{
+                "TITLE":"Visión",
+                "TAGLINE":"Mirando al Futuro",
+                "P1": "Ser la empresa líder en exportación de frutas y vegetales en el Caribe, reconocida por nuestra innovación. Aspiramos a expandir nuestra presencia en mercados globales, promover el desarrollo agrícola responsable y posicionar a la República Dominicana como referente mundial en exportación de productos frescos.",  
+                "CARD_1": "Expansión Global",  
+                "CARD_2": "Sostenibilidad",  
+                "CARD_3": "Excelencia" 
+            },
+            "VALUES":{
+                "TITLE":"Valores",
+                "TAGLINE":"Lo que representamos",
+                "CARD_1": {
+                    "TITLE": "CALIDAD",
+                    "P": "Garantizamos productos frescos y saludables que cumplen con los más altos estándares internacionales."
+                },"CARD_2": {
+                    "TITLE": "COMPROMISO",
+                    "P": "Trabajamos con pasión y responsabilidad para superar las expectativas de nuestros clientes y socios."
+                },"CARD_3": {
+                    "TITLE": "ÉTICA Y TRANSPARENCIA",
+                    "P": "Operamos con integridad en todas las relaciones comerciales, asegurando confianza y credibilidad."
+                }
+            }
+            
+        },
+        "LEADERSHIP": {
+            "SECTION_TITLE":"Conoce a Nuestro Directivo",
+            "LEADER_POSITION": "Presidente de Tranding Global Produce Rofim",
+            "LEADER_P": "Con más de 10 años de experiencia en agroexportación, Joe Mota lidera nuestra misión de conectar mercados globales con productos dominicanos premium. Su enfoque en innovación y alianzas estratégicas garantiza soluciones eficientes y confiables para clientes internacionales."
+        }
+    },
+    "PRODUCTS": {
+        "BANNER":{
+            "P1": "Calidad Premium",
+            "P2": "Productos Auténticos",
+            "P3": "Compromiso Profesional"
+        },
+        "TITLE":"Nuestros Productos",
+        "TAGLINE":"Ofrecemos una amplia gama de productos de diferentes categorías",
+        "CATALOG":"Catálogo de productos"
+
+    },
+    "CONTACT":{
+        "BANNER":{
+            "P1": "Calidad Premium",
+            "P2": "Productos Auténticos",
+            "P3": "Compromiso Profesional"
+        },
+        "TITLE":"Tus Productos Frescos Comienzan Aquí",
+        "TAGLINE":"Ven a Nuestras Instalaciones en Las Cabuyas, La Vega: Donde la Frescura Dominicana se Fusiona con la Excelencia Global.",
+        "INFO": {
+            "TITLE":"Habla con Nuestro Equipo Ahora",
+            "CARDS":{
+                "PHONE":{
+                    "TITLE":"Teléfono",
+                    "P":"+1-809-383-2022"
+                },
+                "EMAIL":{
+                    "TITLE":"Correo Electrónico"
+                },
+                "LOCATION":{
+                    "TITLE":"Ubicación",
+                    "P":"Calle Principal, Las Cabuyas, La Vega, República Dominicana"
+                },
+                "DOWNLOAD":{
+                    "TITLE":"Descargar",
+                    "P":"Catálogo de productos"
+                }
+            }
+        }
+
+    },
+    "FOOTER": {
+        "FOOTER_TITLE" : "Conéctate con Nosotros",
+        "CONTACT_INFO": {
+            "ADDRESS":"Calle Principal, Las Cabuyas, La Vega, República Dominicana",
+            "PHONE": "+1-809-383-2022",
+            "EMAIL": "",
+            "SOCIAL_MEDIA_TITLE":"¡Síguenos en Instagram!",
+            "SOCIAL_MEDIA": {
+                "INSTAGRAM": "https://www.instagram.com/globalproducerofim/"
+            }
+        },
+            "COPYRIGHT":"© 2025 Trading Global Produce Rofim – Todos los derechos reservados"
+    }
+}

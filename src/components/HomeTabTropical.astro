@@ -1,7 +1,12 @@
 ---
+import { getI18N } from "@/i18n";
+
 import * as productAvocado from "../content/products/avocado.md";
 import * as productMango from "../content/products/mango.md";
 import * as productPlantain from "../content/products/plantain.md";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="px-4 mx-auto w-full h-auto max-w-xl pt-20">
@@ -80,11 +85,11 @@ import * as productPlantain from "../content/products/plantain.md";
     <div
       class="w-full h-full flex flex-col justify-center items-center text-white border-l-2 border-gray-100 bg-secondary"
     >
-      <p class="pb-3 px-1">Caribbean Freshness, Global Quality</p>
+      <p class="pb-3 px-1">{i18n.TABS.TAB_TROPICAL.TAB_P}</p>
       <a
         href="/products"
         class="px-2 py-1 rounded-2xl bg-green-100 text-secondary font-bold"
-        >See more ></a
+        >{i18n.TABS.TAB_TROPICAL.TAB_LINK}</a
       >
     </div>
   </div>

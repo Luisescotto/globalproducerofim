@@ -1,4 +1,5 @@
 ---
+import { getI18N } from "@/i18n";
 import {
   Tabs,
   TabsList,
@@ -9,20 +10,23 @@ import {
 import HomeTabTropical from "./HomeTabTropical.astro";
 import HomeTabOriental from "./HomeTabOriental.astro";
 import HomeTabRoots from "./HomeTabRoots.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section class="h-auto flex flex-col items-center py-12">
   <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
-    Our Products
+    {i18n.TABS.SECTION_TITLE}
   </h1>
   <div
-    class="w-auto mx-auto px-8 sm:px-0 flex items-center justify-center text-center pt-2"
+    class="w-auto mx-auto px-6 sm:px-0 flex items-center justify-center text-center pt-2"
   >
     <Tabs defaultValue="tropical" class="max-w-auto">
       <TabsList class="bg-white/0 text-acent">
-        <TabsTrigger value="oriental">ORIENTAL</TabsTrigger>
-        <TabsTrigger value="tropical">TROPICAL</TabsTrigger>
-        <TabsTrigger value="roots">ROOTS</TabsTrigger>
+        <TabsTrigger value="oriental">{i18n.TABS.TAB1_NAME}</TabsTrigger>
+        <TabsTrigger value="tropical">{i18n.TABS.TAB2_NAME}</TabsTrigger>
+        <TabsTrigger value="roots">{i18n.TABS.TAB3_NAME}</TabsTrigger>
       </TabsList>
       <TabsContent value="oriental">
         <HomeTabOriental />

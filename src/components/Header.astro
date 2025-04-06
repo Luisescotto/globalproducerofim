@@ -1,5 +1,18 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { Image } from "astro:assets";
+import { INVALID } from "astro:schema";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const homeURL = getRelativeLocaleUrl(lang, "/");
+const aboutURL = getRelativeLocaleUrl(lang, "about");
+const productsURL = getRelativeLocaleUrl(lang, "products");
+const contactURL = getRelativeLocaleUrl(lang, "contact");
+
+const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
 ---
 
 <header
@@ -10,24 +23,26 @@
   >
     <ul
       id="nav-menu-right"
-      class="hidden lg:flex gap-2 text-2xl text-center items-center px-10"
+      class="hidden lg:flex gap-2 text-2xl text-center items-center"
     >
-      <li class="hover:text-acent transition-colors px-6 rounded font-bold">
-        <a href="/">HOME</a>
+      <li class="hover:text-acent transition-colors px-4 rounded font-bold">
+        <a href={homeCleanURL}>{t("nav.home")}</a>
       </li>
       <li
-        class="hover:text-acent transition-colors px-6 rounded text-nowrap font-bold"
+        class="hover:text-acent transition-colors px-4 rounded text-nowrap font-bold"
       >
-        <a href="../about">ABOUT US</a>
+        <a href=`${(aboutURL)}`>{t("nav.about")}</a>
       </li>
     </ul>
 
     <!-- Logo centrado -->
-    <div class="flex-shrink-0 mx-0 md:mx-0 sm:mx-auto">
-      <img
-        class="w-50 h-auto min-w-[8rem]"
+    <div class="flex-shrink-0 mx-0 md:mx-0 sm:mx-auto py-2">
+      <Image
+        class="w-40 h-auto min-w-[8rem]"
         src="/logo.png"
         alt="Logo de la empresa Tranding Global Produce Rofim"
+        width="300"
+        height="163"
       />
     </div>
 
@@ -36,19 +51,19 @@
       id="nav-menu-right"
       class="hidden lg:flex items-center font-bold text-2xl whitespace-nowrap"
     >
-      <li class="hover:text-acent transition-colors px-6 rounded">
-        <a href="../products">PRODUCTS</a>
+      <li class="hover:text-acent transition-colors px-4 rounded">
+        <a href=`${productsURL}`>{t("nav.products")}</a>
       </li>
       <li
         class="hover:text-acent hover:border-acent transition-colors px-4 rounded border-2"
       >
-        <a href="../contact">CONTACT</a>
+        <a href=`${contactURL}`>{t("nav.contact")}</a>
       </li>
     </ul>
     <!-- Botón de menú para móviles -->
     <button
       id="menu-toggle"
-      class="block lg:hidden p-2 rounded text-white text-3xl border-2 border-white bg-primary"
+      class="block lg:hidden text-title text-5xl"
       aria-label="Toggle Menu"
     >
       ☰

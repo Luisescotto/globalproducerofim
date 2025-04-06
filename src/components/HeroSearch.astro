@@ -1,5 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section
@@ -10,10 +13,10 @@ import { Icon } from "astro-icon/components";
       <h1
         class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl lg:pr-20 font-bold font-inter"
       >
-        TRANDING GLOBAL PRODUCE ROFIM
+        {i18n.HERO_HOME.HERO_TITLE}
       </h1>
       <h2 class="text-xl md:text-2xl font-semibold -mt-2 font-inter">
-        Tropical Produce, Global Reach
+        {i18n.HERO_HOME.HERO_TAGLINE}
       </h2>
     </header>
 
@@ -25,25 +28,25 @@ import { Icon } from "astro-icon/components";
           <Icon
             class="text-2xl sm:text-3xl lg:text-5xl"
             name="check-bold"
-          /><span>Premium Quality</span>
+          /><span>{i18n.HERO_HOME.P1}</span>
         </li>
         <li class="flex">
           <Icon
             class="text-2xl sm:text-3xl lg:text-5xl"
             name="check-bold"
-          /><span>Streamlined Logistics</span>
+          /><span>{i18n.HERO_HOME.P2}</span>
         </li>
         <li class="flex">
           <Icon
             class="text-2xl sm:text-3xl lg:text-5xl"
             name="check-bold"
-          /><span>Genuine Dominican Goods</span>
+          /><span>{i18n.HERO_HOME.P3}</span>
         </li>
         <li class="flex">
           <Icon
             class="text-2xl sm:text-3xl lg:text-5xl"
             name="plus-outline"
-          /><span>10 Years of Sector Expertise</span>
+          /><span>{i18n.HERO_HOME.P4}</span>
         </li>
       </ul>
     </div>

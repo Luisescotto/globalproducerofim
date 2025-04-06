@@ -23,6 +23,7 @@ const { title, description, img, category, packageType, pounds } = data;
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+console.log(product + i18n);
 ---
 
 <style>
@@ -115,7 +116,7 @@ const i18n = getI18N({ currentLocale });
   <footer
     class="w-full h-auto flex justify-center items-center bg-secondary pb-4"
   >
-    <div class="border-2 border-acent pt-4 rounded-xl sm:mx-12 mx-3">
+    <div class="border-2 border-acent pt-4 rounded-xl mx-4">
       <p
         class="prose prose-invert text-white pb-4 px-8 font-bold text-xl text-center sm:text-start"
       >

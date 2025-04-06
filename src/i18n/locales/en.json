@@ -1,0 +1,150 @@
+{
+    "HOME": {
+        "BRANDS_TITLE": "Brands that truts us",
+        "EXPORT_TITLE": "Export Destinations"   
+    },
+    "HERO_HOME": {
+        "HERO_TITLE": "TRANDING GLOBAL PRODUCE ROFIM",
+        "HERO_TAGLINE": "Tropical Produce, Global Reach",
+        "P1": "Premium Quality",
+        "P2": "Streamlined Logistics",
+        "P3": "Genuine Dominican Goods",
+        "P4": "10 Years of Sector Expertise"
+    },
+    "TABS": {
+        "SECTION_TITLE": "Our Products",
+        "TAB1_NAME":"ORIENTAL",
+        "TAB2_NAME":"TROPICAL",
+        "TAB3_NAME": "ROOTS",
+        "TAB_ORIENTAL": {
+            "TAB_P": "Exotic Vegetables: Asian Flavors, Premium Quality",
+        "TAB_LINK": "See more >"
+        },
+        "TAB_TROPICAL": {
+            "TAB_P": "Caribbean Freshness, Global Quality",
+        "TAB_LINK": "See more >"
+        },
+        "TAB_ROOTS": {
+            "TAB_P": "Freshness and Flavor from the Earth",
+        "TAB_LINK": "See more >"
+        }
+    },
+    "ABOUT": {
+        "BANNER_SPAN": "Established in 2024",
+        "BANNER_TITLE": "About Tranding Global Produce Rofim",
+        "BANNER_P": "Connecting Dominican quality produce with global markets through excellence and sustainability.",
+        "MAIN":{
+        "MAIN_SPAN" : "Founded february 2, 2024",
+        "MAIN_TITLE": "Lets Talk about our Company",
+        "MAIN_P1": "Born from over 10 years of expertise in the handling, packaging, and distribution of fruits and vegetables, both domestically across the Dominican Republic and internationally to the United States, Europe, and the Caribbean.",
+        "MAIN_P2": "We continue to modernize our facilities through skilled personnel, efficient producers, and strategic partners, ensuring you receive the finest products from the Dominican Republic.",
+        "FOOTER":{
+            "FOOTER_CARD1":{
+                "CARD_P1": "10+",
+                "CARD_P2": "Years of Experience"
+            },
+            "FOOTER_CARD2":{
+                "CARD_P1": "20+",
+                "CARD_P2": "Product Varieties"
+            }
+        }
+        },
+        "SECTION_PRINCIPLES": {
+            "SECTION_TITLE": "Our Purpose and Path",
+            "SECTION_TAGLINE": "Guided by strong values and a clear vision, we're committed to excellence in every aspect of our business",
+
+            "MISSION":{
+                "TITLE":"Our Mission",
+                "TAGLINE":"Delivering Excellence Globally",
+                "P1":"To provide the international market with fresh, high-quality fruits and vegetables, grown using sustainable practices. Ensuring food safety and the development of our local producers.",
+                "P2":"We commit to excellence at every stage of the process from planting to export to meet our clients' needs and contribute to the growth of the agricultural sector in the Dominican Republic.",
+                "CARD_1":"Sustainable",
+                "CARD_2":"Global Reach",
+                "CARD_3":"Quality Assured"
+            },
+            "VISION":{
+                "TITLE":"Our Vision",
+                "TAGLINE":"Looking to the Future",
+                "P1":"To be the leading fruit and vegetable export company in the Caribbean, recognized for our innovation. We aspire to expand our global market presence, promote responsible agricultural development, and establish the Dominican Republic as a global reference in fresh produce exports.",
+                "CARD_1":"Global Expansion",
+                "CARD_2":"Sustainability",
+                "CARD_3":"Excellence"
+            },
+            "VALUES":{
+                "TITLE":"Our Values",
+                "TAGLINE":"What We Stand For",
+                "CARD_1":{
+                    "TITLE":"QUALITY",
+                    "P":"We guarantee fresh, healthy products that meet the highest international standards."
+                },
+                "CARD_2":{
+                    "TITLE":"COMMITMENT",
+                    "P":"We work with passion and responsibility to fulfill our clients’ and partners’ expectations."
+                },"CARD_3":{
+                    "TITLE":"ETHICS & TRANSPARENCY",
+                    "P":"We operate with integrity in all business relationships, ensuring trust and credibility."
+                }
+            }
+            
+        },
+        "LEADERSHIP": {
+            "SECTION_TITLE":"Meet Our Leadership",
+            "LEADER_POSITION": "President of Trading Global Produce Rofim",
+            "LEADER_P": "With over 10 years of experience in agricultural exports, Joe Mota leads our mission to bridge global markets with premium Dominican produce. His focus on innovation and strategic partnerships ensures efficient, reliable solutions for international clients."
+        }
+    },
+    "PRODUCTS": {
+        "BANNER":{
+            "P1": "Premium Quality",
+            "P2": "Authentic Products",
+            "P3": "Professional Excellence"
+        },
+        "TITLE":"Our Products",
+        "TAGLINE":"We offer a wide range of products from different categories",
+        "CATALOG":"Download our products catalog"
+
+    },
+    "CONTACT":{
+        "BANNER":{
+            "P1": "Premium Quality",
+            "P2": "Authentic Products",
+            "P3": "Professional Excellence"
+        },
+        "TITLE":"Your Fresh Produce Starts Here",
+        "TAGLINE":"Visit our facilities in Las Cabuyas, La Vega, where quality and freshness meet excellence.",
+        "INFO": {
+            "TITLE":"Get In Touch With Us Now",
+            "CARDS":{
+                "PHONE":{
+                    "TITLE":"Phone Number",
+                    "P":"+1-809-383-2022"
+                },
+                "EMAIL":{
+                    "TITLE":"Email"
+                },
+                "LOCATION":{
+                    "TITLE":"Location",
+                    "P":"Main street, Las Cabuyas, La Vega, Dominican Republic"
+                },
+                "DOWNLOAD":{
+                    "TITLE":"Download",
+                    "P":"Download our products catalog"
+                }
+            }
+        }
+
+    },
+    "FOOTER": {
+        "FOOTER_TITLE" : "Connect with Us",
+        "CONTACT_INFO": {
+            "ADDRESS":"Main street, Las Cabuyas, La Vega, Dominican Republic",
+            "PHONE": "+1-809-383-2022",
+            "EMAIL": "&#106;&#111;&#101;&#95;&#114;&#111;&#102;&#105;&#109;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;",
+            "SOCIAL_MEDIA_TITLE":"We're on Instagram",
+            "SOCIAL_MEDIA": {
+                "INSTAGRAM": "https://www.instagram.com/globalproducerofim/"
+            }
+        },
+            "COPYRIGHT":"All Right Reserved. Tranding Global Produce Rofim 2025 ©"
+    }
+}

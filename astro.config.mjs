@@ -13,7 +13,14 @@ export default defineConfig({
 	vite: {
     plugins: [tailwindcss()]
   },
-
+  site: 'https://www.globalproducerofim.com',
+	i18n: {
+		locales: ["en", "es"],
+		defaultLocale: "en",
+		routing:{
+			prefixDefaultLocale: false,
+		}
+	},
   integrations: [icon()],
 	experimental: {
 		svg: {
@@ -23,4 +30,5 @@ export default defineConfig({
 	
 	output: 'server',
   	adapter: vercel(),
+	trailingSlash: 'never',
 });
