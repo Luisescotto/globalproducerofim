@@ -13,12 +13,15 @@ export default defineConfig({
 	vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://www.globalproducerofim.com',
+  site: 'https://globalproducerofim.com',
 	i18n: {
 		locales: ["en", "es"],
 		defaultLocale: "en",
 		routing:{
 			prefixDefaultLocale: false,
+		},
+		fallback: {
+			es: 'en'
 		}
 	},
   integrations: [icon()],
