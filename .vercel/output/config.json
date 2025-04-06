@@ -2,6 +2,13 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "^/(.*)/$",
+			"headers": {
+				"Location": "/$1"
+			},
+			"status": 308
+		},
+		{
 			"handle": "filesystem"
 		},
 		{
@@ -12,11 +19,43 @@
 			"continue": true
 		},
 		{
-			"src": "^/_server-islands/([^/]+?)/?$",
+			"src": "^/_server-islands/([^/]+?)$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/_image/?$",
+			"src": "^/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/about$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/contact$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/about$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/contact$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/products$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/products$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
 			"dest": "_render"
 		}
 	]
