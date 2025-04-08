@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_DBIoaZhA.mjs';
 import 'kleur/colors';
-import { c as $$Layout } from '../chunks/Layout_Bua67f1J.mjs';
-import { $ as $$Contact$1 } from '../chunks/contact_BsuiRGR-.mjs';
+import { c as $$Layout } from '../chunks/Layout_BHc_XtLF.mjs';
+import { $ as $$Contact$1 } from '../chunks/contact_DesY_viP.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Contact = createComponent(($$result, $$props, $$slots) => {

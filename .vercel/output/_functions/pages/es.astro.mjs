@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_DBIoaZhA.mjs';
 import 'kleur/colors';
-import { c as $$Layout } from '../chunks/Layout_Bua67f1J.mjs';
-import { $ as $$Index$1 } from '../chunks/index_CRCaNDqg.mjs';
+import { c as $$Layout } from '../chunks/Layout_BHc_XtLF.mjs';
+import { $ as $$Index$1 } from '../chunks/index_CeLEyDxN.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
