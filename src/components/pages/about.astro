@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
-export const prerender = true;
 import { getI18N } from "@/i18n";
+import { Image } from "astro:assets";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
@@ -18,10 +18,12 @@ const i18n = getI18N({ currentLocale });
   class="flex flex-col w-full max-h-[450px] overflow-hidden text-left z-0 relative min-h-96 justify-items-start items-end"
 >
   <div class="w-full h-full absolute top-0 right-0">
-    <img
+    <Image
       class="object-top h-full w-full object-cover"
       src="/heroBgAbout.jpg"
-      alt=""
+      alt="Diverse Dominican agro-export plantation - Avocados, mangoes, and exotic vegetables for global buyers"
+      width={50}
+      height={50}
     />
   </div>
 </section>
@@ -60,7 +62,13 @@ const i18n = getI18N({ currentLocale });
     class="flex w-full h-auto shadow-md rounded-xl justify-center items-center"
   >
     <div class="p-6">
-      <img class="w-[300px] h-auto" src="/logo.png" alt="" />
+      <Image
+        class="w-[300px] h-auto"
+        src="/logo.png"
+        width={50}
+        height={50}
+        alt="Logo Tranding Global Produce Rofim"
+      />
     </div>
   </div>
   <div class="flex w-full h-auto justify-center items-center">
@@ -160,7 +168,13 @@ const i18n = getI18N({ currentLocale });
       </div>
     </div>
     <div class="w-full h-auto hidden lg:flex sm:px-20 rounded-2xl">
-      <img src="/bannerAbout.jpg" class="w-full rounded-2xl" alt="" />
+      <Image
+        src="/bannerAbout.jpg"
+        class="w-full rounded-2xl"
+        alt="High-quality tropical produce farm in DR - Reliable supply chain for international markets"
+        width={50}
+        height={50}
+      />
     </div>
   </div>
   <div

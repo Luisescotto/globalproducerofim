@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getI18N } from "@/i18n";
+import { Image } from "astro:assets";
+
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
@@ -53,10 +55,12 @@ const i18n = getI18N({ currentLocale });
   </div>
 
   <div class="absolute top-0 bottom-0 w-full h-full z-10">
-    <img
+    <Image
       class="object-center h-full w-full object-cover"
       src="/heroBg.jpg"
       alt=""
+      width={1440}
+      height={953}
     />
   </div>
 </section>

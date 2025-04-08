@@ -1,4 +1,4 @@
 ---
-flagImg: "/flags/puertoRico.png"
+flagImg: "/flags/puertoRico.svg"
 flagAlt: "Flag of Puerto Rico"
 ---

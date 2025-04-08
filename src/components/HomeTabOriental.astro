@@ -1,12 +1,16 @@
 ---
 import { getI18N } from "@/i18n";
-
-import * as productChili from "../content/products/thaiChilli.md";
-import * as productTindora from "../content/products/tindora.md";
-import * as productJack from "../content/products/jackfruit.md";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl } from "@/i18n/utils";
+import { Image } from "astro:assets";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+const lang = getLangFromUrl(Astro.url);
+
+const productChili = await import(`../content/${lang}/thaiChilli.md`);
+const productTindora = await import(`../content/${lang}/tindora.md`);
+const productJack = await import(`../content/${lang}/jackfruit.md`);
 ---
 
 <div class="px-4 mx-auto w-full h-auto max-w-xl pt-20">
@@ -14,14 +18,16 @@ const i18n = getI18N({ currentLocale });
     class="h-auto w-full text-center items-center grid grid-cols-2 grid-rows-2 border-2 border-gray-100 rounded"
   >
     <a
-      href={`/product/${productJack.frontmatter.slug}`}
+      href={`${getRelativeLocaleUrl(lang, "product")}${productJack.frontmatter.slug}`}
       class="xl:mb-0 border-r-2 border-gray-100"
     >
       <article class="flex flex-col w-full relative">
-        <img
+        <Image
           src={`/${productJack.frontmatter.img}`}
           alt={productJack.frontmatter.title}
           class="w-full h-full block"
+          width={600}
+          height={600}
         />
 
         <div
@@ -37,14 +43,16 @@ const i18n = getI18N({ currentLocale });
     </a>
 
     <a
-      href={`/product/${productTindora.frontmatter.slug}`}
+      href={`${getRelativeLocaleUrl(lang, "product")}${productTindora.frontmatter.slug}`}
       class="xl:mb-0 border-b-2 border-gray-100"
     >
       <article class="flex flex-col w-full relative">
-        <img
+        <Image
           src={`/${productTindora.frontmatter.img}`}
           alt={productTindora.frontmatter.title}
           class="w-full h-full block"
+          width={600}
+          height={600}
         />
 
         <div
@@ -60,14 +68,16 @@ const i18n = getI18N({ currentLocale });
     </a>
 
     <a
-      href={`/product/${productChili.frontmatter.slug}`}
+      href={`${getRelativeLocaleUrl(lang, "product")}${productChili.frontmatter.slug}`}
       class="xl:mb-0 border-t-2 border-gray-100"
     >
       <article class="flex flex-col w-full relative">
-        <img
+        <Image
           src={`/${productChili.frontmatter.img}`}
           alt={productChili.frontmatter.title}
           class="w-full h-full block"
+          width={600}
+          height={600}
         />
 
         <div
@@ -89,7 +99,7 @@ const i18n = getI18N({ currentLocale });
         {i18n.TABS.TAB_ORIENTAL.TAB_P}
       </p>
       <a
-        href="/products"
+        href={getRelativeLocaleUrl(lang, "products")}
         class="px-2 py-1 font-bold rounded-2xl text-orange-900 bg-orange-100"
         >{i18n.TABS.TAB_ORIENTAL.TAB_LINK}</a
       >

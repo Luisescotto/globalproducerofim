@@ -6,7 +6,9 @@ import { Icon } from "astro-icon/components";
 
 import { getI18N } from "@/i18n";
 
-export const prerender = true;
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const collection = currentLocale + "_products";
 
 export async function getStaticPaths() {
   const products = await getCollection("products");
@@ -21,8 +23,7 @@ const { product } = Astro.props;
 const { data } = product;
 const { title, description, img, category, packageType, pounds } = data;
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+export const prerender = true;
 ---
 
 <style>
@@ -78,7 +79,7 @@ const i18n = getI18N({ currentLocale });
     >
       <aside class="flex items-center gap 4">
         <Image
-          class="rounded w-72 h-auto pointer-events-none shadow-xl"
+          class="rounded w-90 h-90 pointer-events-none shadow-xl"
           src={`/${img}`}
           alt={title}
           width="200"

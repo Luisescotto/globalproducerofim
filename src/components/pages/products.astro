@@ -3,13 +3,20 @@ import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { getI18N } from "@/i18n";
-
-const products = await getCollection("products");
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
-export const prerender = true;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const productURL = getRelativeLocaleUrl(lang, "products");
+
+const collection = lang;
+
+const products = await getCollection(collection);
 ---
 
 <style>
@@ -81,14 +88,16 @@ export const prerender = true;
         const { data } = product;
         const { title, img, category, slug } = data;
         return (
-          <a href={`/product/${slug}`} class="">
+          <a href={`${getRelativeLocaleUrl(lang, "product")}${slug}`} class="">
             <li class="w-full flex flex-col pb-2 gap-2 justify-center items-center text-center bg-white rounded transition-transform duration-300 hover:scale-105">
-              <img
+              <Image
                 loading="lazy"
                 src={"/" + img}
                 alt={title}
                 decoding="async"
                 class="max-w-none w-50 h-50"
+                width="50"
+                height="50"
               />
               <p>{title}</p>
 

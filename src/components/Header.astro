@@ -1,18 +1,15 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { Image } from "astro:assets";
-import { INVALID } from "astro:schema";
+import LanguageSelector from "@/components/LanguageSelector.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
 const homeURL = getRelativeLocaleUrl(lang, "/");
 const aboutURL = getRelativeLocaleUrl(lang, "about");
 const productsURL = getRelativeLocaleUrl(lang, "products");
 const contactURL = getRelativeLocaleUrl(lang, "contact");
-
-const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
 ---
 
 <header
@@ -26,24 +23,26 @@ const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
       class="hidden lg:flex gap-2 text-2xl text-center items-center"
     >
       <li class="hover:text-acent transition-colors px-4 rounded font-bold">
-        <a href={homeCleanURL}>{t("nav.home")}</a>
+        <a href={homeURL}>{t("nav.home")}</a>
       </li>
       <li
         class="hover:text-acent transition-colors px-4 rounded text-nowrap font-bold"
       >
-        <a href=`${(aboutURL)}`>{t("nav.about")}</a>
+        <a href=`${aboutURL}`>{t("nav.about")}</a>
       </li>
     </ul>
 
     <!-- Logo centrado -->
     <div class="flex-shrink-0 mx-0 md:mx-0 sm:mx-auto py-2">
-      <Image
-        class="w-40 h-auto min-w-[8rem]"
-        src="/logo.png"
-        alt="Logo de la empresa Tranding Global Produce Rofim"
-        width="300"
-        height="163"
-      />
+      <a href={homeURL}>
+        <Image
+          class="w-40 h-auto min-w-[8rem]"
+          src="/logo.png"
+          alt="Logo de la empresa Tranding Global Produce Rofim"
+          width="300"
+          height="163"
+        />
+      </a>
     </div>
 
     <!-- Menú de navegación derecho (oculto en móviles) -->
@@ -60,6 +59,10 @@ const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
         <a href=`${contactURL}`>{t("nav.contact")}</a>
       </li>
     </ul>
+    <div class="hidden lg:flex">
+      <LanguageSelector />
+    </div>
+
     <!-- Botón de menú para móviles -->
     <button
       id="menu-toggle"

@@ -1,4 +1,4 @@
 ---
-flagImg: "/flags/netherlands.png"
+flagImg: "/flags/netherlands.svg"
 flagAlt: "Flag of Netherlands"
 ---

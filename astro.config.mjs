@@ -11,17 +11,13 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
 	vite: {
-    plugins: [tailwindcss()]
-  },
-  site: 'https://globalproducerofim.com',
+		plugins: [tailwindcss()]
+	},
 	i18n: {
 		locales: ["en", "es"],
 		defaultLocale: "en",
-		routing:{
+		routing: {
 			prefixDefaultLocale: false,
-		},
-		fallback: {
-			es: 'en'
 		}
 	},
   integrations: [icon()],
@@ -33,5 +29,5 @@ export default defineConfig({
 	
 	output: 'server',
   	adapter: vercel(),
-	trailingSlash: 'never',
+	trailingSlash: 'ignore',
 });

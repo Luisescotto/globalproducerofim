@@ -1,4 +1,4 @@
 ---
-brandImg: "/brands/logoCoopearroz.webp"
+brandImg: "/brands/logoCoopearroz.png"
 brandAlt: "Logo de la empresa CoppeArroz"
 ---

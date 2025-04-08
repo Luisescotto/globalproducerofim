@@ -6,10 +6,12 @@ import { Icon } from "astro-icon/components";
 
 import { getI18N } from "@/i18n";
 
-export const prerender = true;
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const collection = currentLocale + "_products";
 
 export async function getStaticPaths() {
-  const products = await getCollection("products");
+  const products = await getCollection("es");
 
   return products.map((product: { data: any }) => ({
     params: { id: product.data.slug },
@@ -21,9 +23,7 @@ const { product } = Astro.props;
 const { data } = product;
 const { title, description, img, category, packageType, pounds } = data;
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
-console.log(product + i18n);
+export const prerender = true;
 ---
 
 <style>
@@ -42,13 +42,13 @@ console.log(product + i18n);
       <div class="flex flex-col text-white">
         <ul class="text-[min(6vw,40px)] font-bold">
           <li class="flex">
-            <span>Premium Quality</span>
+            <span>{i18n.CONTACT.BANNER.P1}</span>
           </li>
           <li class="flex">
-            <span>Authentic Products</span>
+            <span>{i18n.CONTACT.BANNER.P2}</span>
           </li>
           <li class="flex">
-            <span>Professional Excellence</span>
+            <span>{i18n.CONTACT.BANNER.P3}</span>
           </li>
         </ul>
       </div>
@@ -68,8 +68,9 @@ console.log(product + i18n);
   <div class="w-full bg-secondary">
     <a
       class="text-white font-bold flex items-center px-12 pt-12"
-      href="/products"
-      ><Icon name="arrow-left" size={50} class="text-white" />All Products
+      href="/es/products"
+      ><Icon name="arrow-left" size={50} class="text-white" />Todos los
+      Productos
     </a>
   </div>
 
@@ -79,7 +80,7 @@ console.log(product + i18n);
     >
       <aside class="flex items-center gap 4">
         <Image
-          class="rounded w-72 h-auto pointer-events-none shadow-xl"
+          class="rounded w-90 h-90 pointer-events-none shadow-xl"
           src={`/${img}`}
           alt={title}
           width="200"
@@ -107,8 +108,8 @@ console.log(product + i18n);
         <h1 class="text-4xl font-bold mb-4">
           {title}
         </h1>
-        <p class="py-2">Availability: Year-Round</p>
-        <p class="py-2">Pack: {packageType}</p>
+        <p class="py-2">Disponibilidad: Todo el año</p>
+        <p class="py-2">Empaque: {packageType}</p>
         <p class="py-2">{pounds ? `Weight: ${pounds}` : ""}</p>
       </main>
     </div>
@@ -116,7 +117,7 @@ console.log(product + i18n);
   <footer
     class="w-full h-auto flex justify-center items-center bg-secondary pb-4"
   >
-    <div class="border-2 border-acent pt-4 rounded-xl mx-4">
+    <div class="border-2 border-acent pt-4 rounded-xl mx-12">
       <p
         class="prose prose-invert text-white pb-4 px-8 font-bold text-xl text-center sm:text-start"
       >
@@ -126,7 +127,7 @@ console.log(product + i18n);
   </footer>
   <div class="w-full flex justify-center items-center text-center">
     <h1 class="text-white font-bold text-2xl py-8 bg-secondary w-full">
-      Why Partner with us?
+      Por qué elegirnos?
     </h1>
   </div>
 
@@ -143,11 +144,11 @@ console.log(product + i18n);
       />
 
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
-        10+ Years of Expertise
+        Más de 10 años de experiencia
       </h2>
       <p class="text-md text-title">
-        Decade-long experience in handling, packaging, and exporting tropical
-        and oriental produce.
+        Una década de experiencia en logística, procesamiento y exportación de
+        productos agrícolas tropicales y asiáticos.
       </p>
     </article>
     <article
@@ -159,11 +160,11 @@ console.log(product + i18n);
         class="text-secondary bg-green-100 rounded-full p-2"
       />
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
-        Premium Quality
+        Calidad Superior Garantizada
       </h2>
       <p class="text-md text-title">
-        Handpicked fruits and vegetables meeting international standards for
-        taste and safety.
+        Productos certificados y seleccionados meticulosamente, con sabor y
+        seguridad garantizados para mercados globales.
       </p>
     </article>
     <article
@@ -175,10 +176,10 @@ console.log(product + i18n);
         class="text-secondary bg-green-100 rounded-full p-2"
       />
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
-        Efficient Logistics
+        Logística Confiable
       </h2>
       <p class="text-md text-title">
-        Seamless shipping to the Americas, Europe, Asia, and the Caribbean.
+        Conectamos productores dominicanos con 4 continentes sin contratiempos.
       </p>
     </article>
     <article
@@ -190,11 +191,10 @@ console.log(product + i18n);
         class="text-secondary bg-green-100 rounded-full p-2"
       />
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
-        Ethical Sourcing
+        Compromiso Ético
       </h2>
       <p class="text-md text-title">
-        Sustainable practices and fair partnerships with local Dominican
-        farmers.
+        Cultivos sostenibles y colaboración justa con productores locales.
       </p>
     </article>
   </div>

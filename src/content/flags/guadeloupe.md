@@ -1,4 +1,4 @@
 ---
-flagImg: "/flags/guadeloupe.png"
+flagImg: "/flags/guadeloupe.svg"
 flagAlt: "Flag of Guadeloupe"
 ---
