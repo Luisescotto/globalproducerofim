@@ -1,4 +1,4 @@
 ---
-brandImg: "/brands/logoNiveo.png"
+brandImg: "/brands/logoNiveo.webp"
 brandAlt: "Logo de la empresa Niveo"
 ---

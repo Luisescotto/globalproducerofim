@@ -57,10 +57,13 @@ export const prerender = true;
     <div class="absolute top-0 bottom-0 w-full h-full z-10">
       <Image
         class="object-center h-full w-full object-cover"
-        src="/heroBgProducts.jpg"
+        src="/heroBgProducts.webp"
         width="200"
         height="150"
         alt="Banner de la sección de productos"
+        loading={"eager"}
+        format="webp"
+        quality={"mid"}
       />
     </div>
   </div>
@@ -85,6 +88,8 @@ export const prerender = true;
           alt={title}
           width="200"
           height="150"
+          format="webp"
+          quality={"mid"}
         />
       </aside>
       <main

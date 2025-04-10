@@ -1,6 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import App from "../components/pages/contact.astro";
+
+export interface Props {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+  /** the DOM ID of a <div> element */
+  container: string;
+  /** https://leafletjs.com/reference.html#tilelayer */
+  tileLayer: string;
+  /** Most tile servers require attribution. */
+  attribution: string;
+  containerstyle?: string;
+}
+
+const {
+  latitude,
+  longitude,
+  zoom,
+  container,
+  tileLayer,
+  attribution,
+  containerstyle = "height: 61.8vh",
+} = Astro.props;
 ---
 
 <Layout title="Contact - Tranding Global Produce Rofim">

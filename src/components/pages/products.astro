@@ -49,10 +49,13 @@ const products = await getCollection(collection);
   <div class="absolute top-0 bottom-0 w-full h-full z-10">
     <Image
       class="object-center h-full w-full object-cover"
-      src="/heroBgProducts.jpg"
-      alt=""
+      src="/heroBgProducts.webp"
+      alt="Dominican Agro-Exporter - Tranding Global Produce Rofim Bridges Tropical & Oriental Produce to Global Markets"
       width="300"
       height="163"
+      format="webp"
+      quality={"mid"}
+      loading={"eager"}
     />
   </div>
 </div>
@@ -93,11 +96,12 @@ const products = await getCollection(collection);
               <Image
                 loading="lazy"
                 src={"/" + img}
-                alt={title}
-                decoding="async"
+                alt={`${title} - Tropical and Oriental Produce Exported Globally by Tranding Global Produce Rofim`}
                 class="max-w-none w-50 h-50"
                 width="50"
                 height="50"
+                format="jpg"
+                quality={"mid"}
               />
               <p>{title}</p>
 

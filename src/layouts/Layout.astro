@@ -1,33 +1,57 @@
 ---
-import Header from "../components/Header.astro";
-import SideMenu from "../components/SideMenu.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
-import "../styles/starwind.css";
+import Header from "@/components/Header.astro";
+import SideMenu from "@/components/SideMenu.astro";
+import Footer from "@/components/Footer.astro";
+import BackToTop from "@/components/BackToTop.astro";
+import "@/styles/global.css";
+import "@/styles/starwind.css";
+import { getI18N } from "@/i18n";
+
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
 const { title } = Astro.props;
 const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<html lang={currentLocale}>
+<html lang={currentLocale} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Pagina web de Global Produce Rofim" />
+    <meta name="description" content={i18n.DESCRIPTION} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta
+      name="keywords"
+      content="Tropical Produce, Oriental Produce, Agro-Exporter, Fresh Fruits, Quality Vegetables, Sustainable Agriculture, Global Produce, Dominican Fruits, International Markets, Produce Exporter, Global Trading, Fresh Produce"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.globalproducerofim.com/" />
+
+    <meta
+      property="og:title"
+      content="Dominican Agro-Exporter - Tranding Global Produce Rofim"
+    />
+    <meta
+      property="og:description"
+      content="Bridging Tropical & Oriental Produce to Global Markets. Discover fresh, high-quality products grown sustainably."
+    />
+    <meta property="og:url" content="https://www.globalproducerofim.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={i18n.OG_IMAGE} />
+
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
   </head>
   <Analytics />
   <SpeedInsights />
-  <body class="font-inter">
+  <body class="font-inter bg-primary w-screen overflow-x-hidden">
     <div>
       <Header />
       <SideMenu />
       <main>
         <slot />
+        <BackToTop />
       </main>
       <Footer />
     </div>

@@ -18,11 +18,14 @@ const i18n = getI18N({ currentLocale });
 <section class="w-full h-full bg-amber-700">
   <div>
     <Image
+      loading="lazy"
       class="w-full h-full pointer-events-none"
-      width={50}
-      height={50}
+      width={1920}
+      height={1080}
+      format="jpg"
+      quality={"mid"}
       src="/bannerbg.jpg"
-      alt=""
+      alt="Dominican Agro-Exporter - Tranding Global Produce Rofim Bridges Tropical & Oriental Produce to Global Markets"
     />
   </div>
 </section>
@@ -48,6 +51,8 @@ const i18n = getI18N({ currentLocale });
                 class="max-w-none w-25 h-18 md:w-35 md:h-25"
                 width={100}
                 height={100}
+                format="webp"
+                quality={"mid"}
               />
             </li>
           );
@@ -78,6 +83,8 @@ const i18n = getI18N({ currentLocale });
                 class="max-w-none w-20 md:w-35 h-auto"
                 width={100}
                 height={100}
+                format="svg"
+                quality={"mid"}
               />
             </li>
           );

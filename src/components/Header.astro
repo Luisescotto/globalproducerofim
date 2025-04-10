@@ -13,7 +13,7 @@ const contactURL = getRelativeLocaleUrl(lang, "contact");
 ---
 
 <header
-  class="flex justify-center fixed top-0 left-0 z-50 w-full px-10 bg-white/70 backdrop-blur-sm"
+  class="flex justify-center fixed top-0 left-0 z-50 w-full px-10 bg-white/80 md:bg-white/70 backdrop-blur-sm"
 >
   <nav
     class="flex items-center justify-between lg:justify-center w-full px-4 gap-8 py-1 text-title"
@@ -33,14 +33,16 @@ const contactURL = getRelativeLocaleUrl(lang, "contact");
     </ul>
 
     <!-- Logo centrado -->
-    <div class="flex-shrink-0 mx-0 md:mx-0 sm:mx-auto py-2">
+    <div class="flex-shrink-0 mx-0 md:mx-0 sm:mx-auto py-2 px-4">
       <a href={homeURL}>
         <Image
           class="w-40 h-auto min-w-[8rem]"
-          src="/logo.png"
+          src="/logo.webp"
           alt="Logo de la empresa Tranding Global Produce Rofim"
           width="300"
           height="163"
+          format="webp"
+          quality={"mid"}
         />
       </a>
     </div>
@@ -53,10 +55,11 @@ const contactURL = getRelativeLocaleUrl(lang, "contact");
       <li class="hover:text-acent transition-colors px-4 rounded">
         <a href=`${productsURL}`>{t("nav.products")}</a>
       </li>
-      <li
-        class="hover:text-acent hover:border-acent transition-colors px-4 rounded border-2"
-      >
-        <a href=`${contactURL}`>{t("nav.contact")}</a>
+      <li class="text-white">
+        <a
+          class="hover:bg-secondary transition-colors px-4 rounded-4xl bg-title/60 py-2"
+          href=`${contactURL}`>{t("nav.contact")}</a
+        >
       </li>
     </ul>
     <div class="hidden lg:flex">

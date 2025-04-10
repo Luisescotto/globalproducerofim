@@ -1,6 +1,7 @@
 ---
 import { getI18N } from "@/i18n";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -34,10 +35,14 @@ const i18n = getI18N({ currentLocale });
   </div>
 
   <div class="absolute top-0 bottom-0 w-full h-full z-10">
-    <img
+    <Image
       class="object-center h-full w-full object-cover"
-      src="/heroBgProducts.jpg"
-      alt=""
+      src="/heroBgProducts.webp"
+      alt="Dominican agro-exporter of tropical and oriental produce - Get in touch with us for shipments to Europe, the Americas, and the Caribbean"
+      width={1440}
+      height={953}
+      format="webp"
+      quality={"mid"}
     />
   </div>
 </div>
@@ -46,21 +51,36 @@ const i18n = getI18N({ currentLocale });
   class="flex flex-col w-full h-auto items-start justify-start text-center mx-auto bg-white"
 >
   <div
-    class="flex flex-col h-auto w-full justify-center text-center items-cente mx-auto px-12 py-4"
+    class="flex flex-col h-auto w-full justify-center text-center items-cente mx-auto py-4"
   >
-    <h3 class="pb-2 text-3xl text-title font-bold">
+    <h3 class="pb-2 text-3xl text-title font-bold px-6">
       {i18n.CONTACT.TITLE}
     </h3>
-    <p class="text-title/80">
+    <p class="text-title/80 px-6">
       {i18n.CONTACT.TAGLINE}
     </p>
-    <div class="py-8">
-      <a href="https://www.google.com/maps" target="_blank">
-        <img
+    <div class="flex py-8 w-full h-auto justify-center items-center group">
+      <a
+        href="https://www.google.com/maps"
+        target="_blank"
+        class="flex justify-center items-center self-center w-full h-auto relative overflow-hidden"
+      >
+        <Image
           class="w-full h-full rounded border-primary shadow-lg"
-          src="/maps.jpg"
-          alt="Ubicación de Trading Global Produce Rofim"
+          src="/maps.webp"
+          alt="Mapa de la ubicación de Trading Global Produce Rofim"
+          width={1400}
+          height={646}
+          format="webp"
+          quality={"mid"}
         />
+        <div
+          class="absolute h-full w-full bg-black/50 items-center justify-center hidden group-hover:flex transition-all duration-1500 ease-in-out"
+        >
+          <p class="text-white text-2xl md:text-4xl">
+            {i18n.CONTACT.GOOGLE_MAPS_LINK}
+          </p>
+        </div>
       </a>
     </div>
   </div>

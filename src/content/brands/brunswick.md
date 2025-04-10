@@ -1,4 +1,4 @@
 ---
-brandImg: "/brands/logoBrunswick.png"
+brandImg: "/brands/logoBrunswick.webp"
 brandAlt: "Logo de la empresa Brunswick"
 ---

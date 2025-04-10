@@ -1,4 +1,6 @@
 {
+    "DESCRIPTION":"Dominican Agro-Exporter - Tranding Global Produce Rofim bridges Tropical & Oriental Produce to Global Markets. Abastecemos mercados internacionales con frutas y vegetales frescos y de alta calidad, cultivados bajo prácticas sostenibles.",
+    "OG_IMAGE":"/trandingglobalproducerofim-hero-es.jpg",
     "HOME": {
         "BRANDS_TITLE": "Marcas que confían en nosotros",
         "EXPORT_TITLE": "Destinos de Exportación"   
@@ -111,6 +113,7 @@
         },
         "TITLE":"Tus Productos Frescos Comienzan Aquí",
         "TAGLINE":"Ven a Nuestras Instalaciones en Las Cabuyas, La Vega: Donde la Frescura Dominicana se Fusiona con la Excelencia Global.",
+        "GOOGLE_MAPS_LINK":"Ver en Google Maps",
         "INFO": {
             "TITLE":"Habla con Nuestro Equipo Ahora",
             "CARDS":{

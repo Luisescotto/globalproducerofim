@@ -1,4 +1,4 @@
 ---
-brandImg: "/brands/logoNestle.png"
+brandImg: "/brands/logoNestle.webp"
 brandAlt: "Logo de la empresa Nestle"
 ---
