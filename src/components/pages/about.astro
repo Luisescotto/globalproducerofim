@@ -92,8 +92,10 @@ const i18n = getI18N({ currentLocale });
       <p class="py-6 text-title/90 font-medium">
         {i18n.ABOUT.MAIN.MAIN_P2}
       </p>
-      <footer class="flex w-full justify-between gap-4 items-center">
-        <div class="bg-green-100 px-10 py-4 text-center rounded w-full">
+      <footer class="flex gap-4 items-stretch">
+        <div
+          class="bg-green-100 px-10 py-4 text-center rounded w-1/2 flex flex-col items-center justify-center"
+        >
           <p class="font-bold text-secondary text-3xl">
             {i18n.ABOUT.MAIN.FOOTER.FOOTER_CARD1.CARD_P1}
           </p>
@@ -101,7 +103,9 @@ const i18n = getI18N({ currentLocale });
             {i18n.ABOUT.MAIN.FOOTER.FOOTER_CARD1.CARD_P2}
           </p>
         </div>
-        <div class="bg-green-100 px-10 py-4 text-center rounded w-full">
+        <div
+          class="bg-green-100 px-10 py-4 text-center rounded w-1/2 flex flex-col items-center justify-center"
+        >
           <p class="font-bold text-secondary text-3xl">
             {i18n.ABOUT.MAIN.FOOTER.FOOTER_CARD2.CARD_P1}
           </p>
@@ -153,7 +157,7 @@ const i18n = getI18N({ currentLocale });
           <Icon
             name="global"
             size={40}
-            class="text-secondary bg-green-100 rounded-full sm:p-2 p-1"
+            class="text-secondary bg-green-100 rounded-full p-2"
           />
           <p class="text-title/90 text-nowrap">
             {i18n.ABOUT.SECTION_PRINCIPLES.MISSION.CARD_2}
@@ -163,7 +167,7 @@ const i18n = getI18N({ currentLocale });
           <Icon
             name="shield"
             size={40}
-            class="text-secondary bg-green-100 rounded-full sm:p-2 p-1"
+            class="text-secondary bg-green-100 rounded-full p-2"
           />
           <p class="text-title/90 text-nowrap">
             {i18n.ABOUT.SECTION_PRINCIPLES.MISSION.CARD_3}
@@ -184,7 +188,7 @@ const i18n = getI18N({ currentLocale });
     </div>
   </div>
   <div
-    class="flex flex-col-reverse sm:flex-row w-full h-auto items-start justify-between sideUp"
+    class="flex flex-col-reverse lg:flex-row w-full h-auto items-start justify-between sideUp"
   >
     <div
       class="w-full h-auto flex flex-col items-start justify-center px-12 py-6"
@@ -201,9 +205,9 @@ const i18n = getI18N({ currentLocale });
         <div class="flex py-4 items-center justify-center">
           <Icon
             name="star"
-            class="text-secondary text-7xl lg:bg-green-100 lg:p-2 md:text-5xl rounded-full"
+            class="text-secondary text-4xl bg-green-100 px-2 rounded-full w-10"
           />
-          <div class="pl-2">
+          <div class="pl-2 w-full">
             <h3 class="font-bold text-title">
               {i18n.ABOUT.SECTION_PRINCIPLES.VALUES.CARD_1.TITLE}
             </h3>
@@ -216,9 +220,9 @@ const i18n = getI18N({ currentLocale });
         <div class="flex py-4 items-center justify-center">
           <Icon
             name="users"
-            class="text-secondary text-7xl lg:bg-green-100 lg:p-2 md:text-5xl rounded-full"
+            class="text-secondary text-4xl bg-green-100 px-2 rounded-full w-10"
           />
-          <div class="pl-2">
+          <div class="pl-2 w-full">
             <h3 class="font-bold text-title">
               {i18n.ABOUT.SECTION_PRINCIPLES.VALUES.CARD_2.TITLE}
             </h3>
@@ -231,9 +235,9 @@ const i18n = getI18N({ currentLocale });
         <div class="flex py-4 items-center justify-center">
           <Icon
             name="shield"
-            class="text-secondary text-7xl lg:bg-green-100 lg:p-2 md:text-5xl rounded-full"
+            class="text-secondary text-4xl bg-green-100 px-2 rounded-full w-10"
           />
-          <div class="pl-2">
+          <div class="pl-2 w-full">
             <h3 class="font-bold text-title">
               {i18n.ABOUT.SECTION_PRINCIPLES.VALUES.CARD_3.TITLE}
             </h3>
