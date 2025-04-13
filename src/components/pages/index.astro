@@ -24,7 +24,7 @@ const i18n = getI18N({ currentLocale });
       height={1080}
       format="jpg"
       quality={"mid"}
-      src="/bannerbg.jpg"
+      src="/bannerbg.webp"
       alt="Dominican Agro-Exporter - Tranding Global Produce Rofim Bridges Tropical & Oriental Produce to Global Markets"
     />
   </div>
@@ -45,7 +45,6 @@ const i18n = getI18N({ currentLocale });
           return (
             <li class="flex gap-2">
               <Image
-                loading="lazy"
                 src={brandImg}
                 alt={brandAlt}
                 class="max-w-none w-25 h-18 md:w-35 md:h-25"
@@ -77,7 +76,6 @@ const i18n = getI18N({ currentLocale });
           return (
             <li class="flex gap-2">
               <Image
-                loading="lazy"
                 src={flagImg}
                 alt={flagAlt}
                 class="max-w-none w-20 md:w-35 h-25"

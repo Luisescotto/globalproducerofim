@@ -4,6 +4,7 @@ import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import LanguageSelector from "@/components/LanguageSelector.astro";
+import { getI18N } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,6 +15,9 @@ const productsURL = getRelativeLocaleUrl(lang, "products");
 const contactURL = getRelativeLocaleUrl(lang, "contact");
 
 const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div
@@ -25,42 +29,80 @@ const homeCleanURL = homeURL === "/" ? homeURL : homeURL.slice(0, -1);
   class="flex flex-col items-start bg-white/90 backdrop-blur-sm text-white p-6 fixed top-0 -right-[500px] h-screen w-[270px] z-60 border-l-2 border-white transition-all"
   id="side_menu"
 >
-  <nav class="flex flex-col gap-4 pl-4 w-full">
+  <nav class="flex flex-col gap-4 w-full">
     <button
-      class="p-2 rounded-md hover:bg-primary self-end"
+      class="p-2 rounded-md text-title hover:bg-secondary/80 hover:text-white self-end"
       id="side_menu_close"
     >
       <Icon name="close" size={32} />
     </button>
     <ul class="flex flex-col gap-4">
-      <li>
+      <li class="px-2">
         <a
-          class="text-2xl text-title font-medium hover:bg-primary px-2 py-2 rounded"
-          href={homeCleanURL}>{t("nav.home")}</a
+          class="flex gap-4 text-xl text-title font-medium items-center hover:underline"
+          href={homeCleanURL}
+        >
+          <Icon
+            name="home"
+            size={35}
+            class="p-1.5 bg-transparent shadow-sm text-title/80 rounded"
+          />
+          {t("nav.home")}</a
         >
       </li>
-      <li>
+
+      <li class="px-2">
         <a
-          class="text-2xl text-title font-medium hover:bg-primary px-2 py-2 rounded"
-          href=`${aboutURL}`>{t("nav.about")}</a
+          class="flex gap-4 text-xl text-title font-medium items-center hover:underline"
+          href=`${aboutURL}`
+        >
+          <Icon
+            name="users"
+            size={35}
+            class="p-1.5 bg-transparent shadow-sm text-title/80 rounded"
+          />
+          {t("nav.about")}</a
         >
       </li>
-      <li>
+
+      <li class="px-2">
         <a
-          class="text-2xl text-title font-medium hover:bg-primary px-2 py-2 rounded"
-          href=`${productsURL}`>{t("nav.products")}</a
+          class="flex gap-4 text-xl text-title font-medium items-center hover:underline"
+          href=`${productsURL}`
+        >
+          <Icon
+            name="products"
+            size={35}
+            class="p-1.5 bg-transparent shadow-sm text-title/80 rounded"
+          />
+          {t("nav.products")}</a
         >
       </li>
-      <li>
+      <li
+        class="px-2 py-2 rounded-xl bg-linear-to-r from-[#0fb880] to-[#06986a]"
+      >
         <a
-          class="hover:border-primary hover:bg-primary transition-colors px-3 rounded-4xl text-title border-2 border-title py-1 text-2xl"
-          href=`${contactURL}`>{t("nav.contact")}</a
+          class="flex gap-4 text-white text-xl font-medium items-center hover:underline"
+          href=`${contactURL}`
+        >
+          <Icon
+            name="mail"
+            size={35}
+            class="p-1.5 text-white rounded-lg bg-white/20"
+          />
+          {t("nav.contact")}</a
         >
       </li>
     </ul>
   </nav>
 
-  <div class="pl-4 py-4">
+  <div
+    class="flex flex-col w-full justify-start px-4 py-2 mt-4 border-gray-300 border-t-2"
+  >
+    <div class="flex text-title gap-2 py-2 font-medium">
+      <Icon name="global" size={20} />
+      <p class="">{i18n.LAMGUAJE_SELECTOR}</p>
+    </div>
     <LanguageSelector />
   </div>
 </aside>
