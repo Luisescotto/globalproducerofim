@@ -1,14 +1,17 @@
 @import "tailwindcss";
-/* @plugin "@tailwindcss/typography"; */
+
+
 @theme {
     --color-primary: #AAD047;
     --color-acent: #F7811D;
     --color-secondary: #037B4B;
     --color-title: #3A4557;
     --color-terra: #51473A;
-    --font-inter: "Inter", sans-serif;
 
     --animate-loop-scroll: loop-scroll 40s linear infinite;
+    --animate-loop-inverse: loop-inverse 40s linear infinite;
+    --animate-side-up: side-up 1s linear;
+    --animate-appear: appear 1s linear;
     
         @keyframes loop-scroll {
     
@@ -20,11 +23,7 @@
                 transform: translateX(calc(-50% - 20px));
             }
         }
-}
 
-@theme{
-    --animate-loop-inverse: loop-inverse 40s linear infinite;
-    
         @keyframes loop-inverse {
     
             100% {
@@ -35,9 +34,43 @@
                 transform: translateX(calc(-50% - 20px));
             }
         }
+
+        @keyframes appear {
+                from {
+                    opacity: 0;
+                    transform: translateX(-150px);
+                }
+        
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+
+        @keyframes side-up {
+            from {
+                opacity: 0.5;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+
+        
 }
 
-
+@layer{
+    .sideUp {
+            animation: side-up 1s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            content-visibility: auto;
+        }
+}
 
 @font-face {
     font-family: Inter;

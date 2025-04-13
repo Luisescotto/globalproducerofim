@@ -1,7 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getI18N } from "@/i18n";
-import { Image } from "astro:assets";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -10,60 +9,71 @@ const i18n = getI18N({ currentLocale });
 <section
   class="flex w-full h-screen overflow-hidden text-left z-0 relative min-h-96 justify-items-start items-center md:items-end"
 >
-  <div class="z-30 relative pb-6 px-10 text-white">
+  <div class="z-30 relative pb-6 px-10 text-white animate-appear">
     <header class="flex flex-col flex-nowrap mb-4">
       <h1
-        class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl lg:pr-20 font-bold font-inter"
+        class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-20 font-bold"
       >
         {i18n.HERO_HOME.HERO_TITLE}
       </h1>
-      <h2 class="text-xl md:text-2xl font-semibold -mt-2 font-inter">
+      <h2 class="text-xl md:text-4xl font-semibold -mt-2 md:tracking-widest">
         {i18n.HERO_HOME.HERO_TAGLINE}
       </h2>
     </header>
 
     <div class="flex flex-col text-white">
-      <ul
-        class="text-xl sm:2xl md:4xl lg:text-4xl font-light justify-center items-start flex flex-col gap-5"
-      >
-        <li class="flex">
+      <ul class="justify-center items-start flex flex-col gap-5">
+        <li class="flex justify-center items-center">
           <Icon
-            class="text-2xl sm:text-3xl lg:text-5xl"
+            class="text-primary text-3xl md:text-4xl lg:text-5xl"
             name="check-bold"
-          /><span>{i18n.HERO_HOME.P1}</span>
+          /><span
+            class="font-medium text-2xl sm:text-3xl md:text-3xl lg:text-4xl"
+            >{i18n.HERO_HOME.P1}</span
+          >
         </li>
-        <li class="flex">
+        <li class="flex justify-center items-center">
           <Icon
-            class="text-2xl sm:text-3xl lg:text-5xl"
+            class="text-primary text-3xl md:text-4xl lg:text-5xl"
             name="check-bold"
-          /><span>{i18n.HERO_HOME.P2}</span>
+          /><span
+            class="font-medium text-2xl sm:text-3xl md:text-3xl lg:text-4xl"
+            >{i18n.HERO_HOME.P2}</span
+          >
         </li>
-        <li class="flex">
+        <li class="flex justify-center items-center">
           <Icon
-            class="text-2xl sm:text-3xl lg:text-5xl"
+            class="text-primary text-3xl md:text-4xl lg:text-5xl"
             name="check-bold"
-          /><span>{i18n.HERO_HOME.P3}</span>
+          /><span
+            class="font-medium text-2xl sm:text-3xl md:text-3xl lg:text-4xl"
+            >{i18n.HERO_HOME.P3}</span
+          >
         </li>
-        <li class="flex">
+        <li class="flex justify-center items-center">
           <Icon
-            class="text-2xl sm:text-3xl lg:text-5xl"
+            class="text-primary text-3xl md:text-4xl lg:text-5xl"
             name="plus-outline"
-          /><span>{i18n.HERO_HOME.P4}</span>
+          /><span
+            class="font-medium text-2xl sm:text-3xl md:text-3xl lg:text-4xl"
+            >{i18n.HERO_HOME.P4}</span
+          >
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="absolute top-0 bottom-0 w-full h-full z-10">
-    <Image
-      class="object-center h-full w-full object-cover"
-      src="/heroBg.webp"
-      alt="Vibrant display of fresh crops showcasing the quality and sustainable practices of Tranding Global Produce Rofim in supplying international markets"
-      width={1440}
-      height={953}
-      format="webp"
-      quality={"mid"}
-      loading={"eager"}
-    />
+  <div class="absolute top-0 bottom-0 w-full h-full z-10 image">
+    <!-- hero background -->
   </div>
 </section>
+
+<style>
+  .image {
+    background-image: url("/heroBg.webp");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: 20;
+  }
+</style>

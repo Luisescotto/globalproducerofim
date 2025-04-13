@@ -17,8 +17,8 @@ const i18n = getI18N({ currentLocale });
 <section
   class="flex flex-col w-full max-h-[450px] overflow-hidden text-left z-0 relative min-h-96 justify-items-start items-end"
 >
-  <div class="w-full h-full absolute top-0 right-0">
-    <Image
+  <div class="w-full h-full absolute top-0 right-0 image">
+    <!-- <Image
       class="object-top h-full w-full object-cover"
       src="/heroBgAbout.jpg"
       alt="Diverse Dominican agro-export plantation - Avocados, mangoes, and exotic vegetables for global buyers"
@@ -26,7 +26,7 @@ const i18n = getI18N({ currentLocale });
       height={50}
       format="jpg"
       quality={"mid"}
-    />
+    /> -->
   </div>
 </section>
 
@@ -58,7 +58,7 @@ const i18n = getI18N({ currentLocale });
 </main>
 
 <section
-  class="flex flex-col sm:flex-row gap-8 h-auto w-full bg-white px-4 py-4"
+  class="flex flex-col sm:flex-row gap-8 h-auto w-full bg-white px-4 py-4 sideUp"
 >
   <div
     class="flex w-full h-auto shadow-md rounded-xl justify-center items-center"
@@ -123,7 +123,7 @@ const i18n = getI18N({ currentLocale });
   <p class="px-8 pb-6 font-medium text-title/90 text-center">
     {i18n.ABOUT.SECTION_PRINCIPLES.SECTION_TAGLINE}
   </p>
-  <div class="flex gap-6 items-center">
+  <div class="flex gap-6 items-center sideUp">
     <div class="w-full h-auto py-4 px-12">
       <span
         class="bg-green-100 rounded-2xl text-secondary px-3 py-0.5 font-medium"
@@ -184,7 +184,7 @@ const i18n = getI18N({ currentLocale });
     </div>
   </div>
   <div
-    class="flex flex-col-reverse sm:flex-row w-full h-auto items-start justify-between"
+    class="flex flex-col-reverse sm:flex-row w-full h-auto items-start justify-between sideUp"
   >
     <div
       class="w-full h-auto flex flex-col items-start justify-center px-12 py-6"
@@ -246,7 +246,7 @@ const i18n = getI18N({ currentLocale });
       </div>
     </div>
     <div
-      class="w-full h-full flex flex-col items-start justify-between px-12 py-6"
+      class="w-full h-full flex flex-col items-start justify-between px-12 py-6 sideUp"
     >
       <span
         class="bg-green-100 rounded-2xl text-secondary px-3 py-0.5 font-medium"
@@ -307,7 +307,7 @@ const i18n = getI18N({ currentLocale });
   <h2 class="text-2xl font-bold text-center text-title mb-6">
     {i18n.ABOUT.LEADERSHIP.SECTION_TITLE}
   </h2>
-  <div class="bg-white rounded-lg shadow-md p-6 flex flex-col max-w-120">
+  <div class="bg-white rounded-lg shadow-md p-6 flex flex-col max-w-120 sideUp">
     <h3 class="text-4xl font-semibold text-green-600 mb-2 self-center">
       Joe Mota
     </h3>
@@ -337,3 +337,13 @@ const i18n = getI18N({ currentLocale });
     </div>
   </div>
 </section>
+
+<style>
+  .image {
+    background-image: url("/heroBgAbout.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: 20;
+  }
+</style>

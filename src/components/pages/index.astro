@@ -1,6 +1,6 @@
 ---
-import HeroSearch from "../../components/HeroSearch.astro";
-import HomeTabs from "../../components/HomeTabs.astro";
+import HeroSearch from "@/components/HeroSearch.astro";
+import HomeTabs from "@/components/HomeTabs.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
@@ -15,7 +15,7 @@ const i18n = getI18N({ currentLocale });
 <HeroSearch />
 <HomeTabs />
 
-<section class="w-full h-full bg-amber-700">
+<section class="w-full h-full bg-amber-700 sideUp">
   <div>
     <Image
       loading="lazy"
@@ -30,7 +30,7 @@ const i18n = getI18N({ currentLocale });
   </div>
 </section>
 
-<section class="flex flex-col mt-6 w-full h-full">
+<section class="flex flex-col mt-6 w-full h-full sideUp">
   <div class="flex justify-center items-center text-center">
     <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
       {i18n.HOME.BRANDS_TITLE}
@@ -62,7 +62,7 @@ const i18n = getI18N({ currentLocale });
   </div>
 </section>
 
-<section class="flex flex-col mt-6 w-full h-full">
+<section class="flex flex-col mt-6 w-full h-full sideUp">
   <div class="flex justify-center items-center text-center">
     <h1 class="text-title font-bold border-b-2 border-acent text-4xl pt-4">
       {i18n.HOME.EXPORT_TITLE}
@@ -75,12 +75,12 @@ const i18n = getI18N({ currentLocale });
           const { data } = flag;
           const { flagImg, flagAlt } = data;
           return (
-            <li class="flex gap-2 shadow-md">
+            <li class="flex gap-2">
               <Image
                 loading="lazy"
                 src={flagImg}
                 alt={flagAlt}
-                class="max-w-none w-20 md:w-35 h-auto"
+                class="max-w-none w-20 md:w-35 h-25"
                 width={100}
                 height={100}
                 format="svg"

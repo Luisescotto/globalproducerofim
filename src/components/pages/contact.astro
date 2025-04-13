@@ -34,8 +34,8 @@ const i18n = getI18N({ currentLocale });
     </div>
   </div>
 
-  <div class="absolute top-0 bottom-0 w-full h-full z-10">
-    <Image
+  <div class="absolute top-0 bottom-0 w-full h-full z-10 image">
+    <!-- <Image
       class="object-center h-full w-full object-cover"
       src="/heroBgProducts.webp"
       alt="Dominican agro-exporter of tropical and oriental produce - Get in touch with us for shipments to Europe, the Americas, and the Caribbean"
@@ -43,47 +43,36 @@ const i18n = getI18N({ currentLocale });
       height={953}
       format="webp"
       quality={"mid"}
-    />
+    /> -->
   </div>
 </div>
 <main
   aria-label="us"
-  class="flex flex-col w-full h-auto items-start justify-start text-center mx-auto bg-white"
+  class="flex flex-col w-full h-auto items-start justify-start text-center mx-auto bg-white pt-6"
 >
   <div
-    class="flex flex-col h-auto w-full justify-center text-center items-cente mx-auto py-4"
+    class="flex flex-col w-full h-auto justify-center text-center items-center pt-4"
   >
-    <h3 class="pb-2 text-3xl text-title font-bold px-6">
+    <h3 class="text-3xl text-title font-bold px-6 border-b-2 border-acent">
       {i18n.CONTACT.TITLE}
     </h3>
-    <p class="text-title/80 px-6">
+    <p class="text-lg font-medium text-title/80 px-6 pt-2">
       {i18n.CONTACT.TAGLINE}
     </p>
-    <div class="flex py-8 w-full h-auto justify-center items-center group">
-      <a
-        href="https://www.google.com/maps"
-        target="_blank"
-        class="flex justify-center items-center self-center w-full h-auto relative overflow-hidden"
-      >
-        <Image
-          class="w-full h-full rounded border-primary shadow-lg"
-          src="/maps.webp"
-          alt="Mapa de la ubicación de Trading Global Produce Rofim"
-          width={1400}
-          height={646}
-          format="webp"
-          quality={"mid"}
-        />
-        <div
-          class="absolute h-full w-full bg-black/50 items-center justify-center hidden group-hover:flex transition-all duration-1500 ease-in-out"
-        >
-          <p class="text-white text-2xl md:text-4xl">
-            {i18n.CONTACT.GOOGLE_MAPS_LINK}
-          </p>
-        </div>
-      </a>
+
+    <div class="flex w-full h-auto justify-center items-center pt-6">
+      <iframe
+        class="w-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.265210313511!2d-70.44569452427382!3d19.22727008200874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb02bab25623d93%3A0xdf2c8f07f8082599!2sKP%20Export!5e0!3m2!1ses!2sdo!4v1744511455194!5m2!1ses!2sdo"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen="false"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
+
   <h1 class="text-white font-bold text-2xl py-8 bg-secondary w-full">
     {i18n.CONTACT.INFO.TITLE}
   </h1>
@@ -92,7 +81,7 @@ const i18n = getI18N({ currentLocale });
   >
     <a
       href="tel:+18093832022"
-      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md"
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 font-bold justify-around items-center p-8 rounded shadow-md sideUp"
     >
       <Icon
         name="phone"
@@ -107,7 +96,7 @@ const i18n = getI18N({ currentLocale });
     </a>
     <a
       href="mailto:joe_rofim@hotmail.com"
-      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md"
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md sideUp"
     >
       <Icon
         name="mail"
@@ -117,12 +106,12 @@ const i18n = getI18N({ currentLocale });
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
         {i18n.CONTACT.INFO.CARDS.EMAIL.TITLE}
       </h2>
-      <p class="text-xl sm:text-sm lg:text-xl text-title">
+      <p class="text-xl sm:text-sm lg:text-xl text-title font-bold">
         &#106;&#111;&#101;&#95;&#114;&#111;&#102;&#105;&#109;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
       </p>
     </a>
     <article
-      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md"
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md sideUp"
     >
       <Icon
         name="location"
@@ -132,14 +121,15 @@ const i18n = getI18N({ currentLocale });
       <h2 class="text-2xl font-medium py-1.5 leading-tight text-secondary">
         {i18n.CONTACT.INFO.CARDS.LOCATION.TITLE}
       </h2>
-      <p class="text-lg text-title">
+      <p class="text-lg text-title font-bold">
         {i18n.CONTACT.INFO.CARDS.LOCATION.P}
       </p>
     </article>
     <a
-      href="https://drive.google.com/file/d/1lmR6_0v0gq2g_zisNjtIdXSHKal9EWel/view?usp=drive_link"
+      href="/Products_catalog.pdf"
+      download
       target="_blank"
-      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md"
+      class="flex flex-col w-full h-full bg-white hover:bg-linear-to-b from-white to-primary/20 justify-around items-center p-8 rounded shadow-md sideUp"
     >
       <Icon
         name="download"
@@ -150,10 +140,21 @@ const i18n = getI18N({ currentLocale });
         {i18n.CONTACT.INFO.CARDS.DOWNLOAD.TITLE}
       </h2>
       <p
-        class="text-md text-secondary border-2 border-secondary rounded px-3 py-2"
+        class="text-md text-secondary border-2 border-secondary rounded px-3 py-2 font-bold"
       >
         {i18n.CONTACT.INFO.CARDS.DOWNLOAD.P}
       </p>
     </a>
   </div>
 </main>
+
+<style>
+  .image {
+    background-image: url("/heroBgProducts.webp");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 20;
+  }
+</style>

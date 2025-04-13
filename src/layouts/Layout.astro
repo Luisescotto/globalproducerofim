@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 const { title } = Astro.props;
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+const preloadImg = "/heroBg.webp";
 ---
 
 <html lang={currentLocale} class="scroll-smooth">
@@ -20,6 +21,7 @@ const i18n = getI18N({ currentLocale });
     <meta charset="UTF-8" />
     <meta name="description" content={i18n.DESCRIPTION} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href={preloadImg} />
     <meta
       name="keywords"
       content="Tropical Produce, Oriental Produce, Agro-Exporter, Fresh Fruits, Quality Vegetables, Sustainable Agriculture, Global Produce, Dominican Fruits, International Markets, Produce Exporter, Global Trading, Fresh Produce"
