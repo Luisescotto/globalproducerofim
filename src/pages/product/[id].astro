@@ -70,7 +70,7 @@ export const prerender = true;
     <div
       class="flex flex-col-reverse sm:flex-row sm:items-center gap-12 justify-center items-start"
     >
-      <aside class="flex items-center gap 4">
+      <aside class="flex items-center gap 4 w-full h-auto">
         <Image
           class="rounded w-90 h-90 pointer-events-none shadow-xl"
           src={`/${img}`}
@@ -82,7 +82,7 @@ export const prerender = true;
         />
       </aside>
       <main
-        class="max-w-3xl text-white flex flex-col justify-center items-start"
+        class="w-full text-white flex flex-col justify-center items-center sm:items-start"
       >
         {
           category == "Tropical" ? (
